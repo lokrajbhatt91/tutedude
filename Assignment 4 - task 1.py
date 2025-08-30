@@ -7,7 +7,6 @@ try:
     for line,x in zip(text_file,range(1,line_number+1)):
         print(f"Line {x}: {line}",end="")
     #print(text_file.read(}))
-except FileNotFoundError:
-    print("Error: The file \'sample.txt\' was not found.")
-finally:
     text_file.close()
+except (FileNotFoundError, NameError):
+    print("Error: The file \'sample.txt\' was not found.")
